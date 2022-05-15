@@ -21,9 +21,11 @@ bool variation[6] = { 0, 0, 0, 0, 0, 0 };
 
 bool menuOn = 1;
 
+bool HTPon = 0;
+
 int cards = 0;
 
-enum eDirection { UP, DOWN, LEFT, RIGHT, STOP, withdraw, PUT, START};
+enum eDirection { UP, DOWN, LEFT, RIGHT, STOP, withdraw, PUT, START, BACK, HTP};
 eDirection way;
 
 HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -34,6 +36,15 @@ void menu()
 	cout << "CODEALERS!" << endl << endl << endl << endl; 
 	cout << "1. START" << endl;
 	cout << "2. HOW TO PLAY";
+}
+
+void tutorial()
+{
+	cout << "Press B to go back to menu" << endl;
+	cout << "Press Q to get a card" << endl;
+	cout << "Move with A and D" << endl;
+	cout << "Press E to put a card" << endl;
+	cout << "Card have limit" << endl;
 }
 
 void choice()
@@ -76,7 +87,7 @@ void clear()
 
 void draw()
 {
-	if (menuOn == 0)
+	if (menuOn == 0 and HTPon == 0)
 	{
 		for (int i = 0; i <= height; i++)
 		{
@@ -884,6 +895,14 @@ void draw()
 			cout << endl;
 		}
 	}
+	if (HTPon == 1 and menuOn == 0)
+	{
+		tutorial();
+	}
+	if (menuOn == 1 and HTPon == 0)
+	{
+		menu();
+	}
 }
 
 void Logic()
@@ -907,8 +926,21 @@ void Logic()
 		break;
 	case START:
 		menuOn = 0;
+		HTPon = 0;
+		system("cls");
 		way = STOP;
 		break;
+	case BACK:
+		menuOn = 1;
+		HTPon = 0;
+		system("cls");
+		way = STOP;
+		break;
+	case HTP:
+		menuOn = 0;
+		HTPon = 1;
+		system("cls");
+		way = STOP;
 	case PUT:
 		if (cards > 0)
 		{
@@ -930,6 +962,13 @@ void Input()
 		case '1':
 			way = START;
 			break;
+		case '2':
+			way = HTP;
+			break;
+		case 'b':
+			way = BACK;
+			break;
+
 			if (menuOn == 0)
 			{
 		case 'a':
@@ -948,10 +987,6 @@ void Input()
 			break;
 			}
 		}
-	}
-	else
-	{
-		menu();
 	}
 }
 
