@@ -13,12 +13,27 @@ int height = 65;
 
 bool cardCon[29] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 
-short int variation[6] = {1, 1, 1, 1, 1, 1};
+short int variation[6] = { 0, 0, 0, 0, 0, 0 };
 
 enum eDirection { UP, DOWN, LEFT, RIGHT, STOP };
 eDirection way;
 
 HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+
+void varietionRandomizer()
+{
+	for (int i = 0; i < 6; i++)
+	{
+		if (rand() % 1 == 0)
+		{
+			variation[i] == 0;
+		}
+		else
+		{
+			variation[i] == 1;
+		}
+	}
+}
 
 void clear()
 {
@@ -250,7 +265,6 @@ void draw()
 				}
 			}
 			//Permanent
-
 			else if ((i == 25 and j > 3 and j < 9) or (i == 29 and j > 3 and j < 9))
 			{
 				cout << "_";
@@ -302,10 +316,223 @@ void draw()
 			}
 			//
 
+
+			else if ((i == 30 and j > 6 and j < 12) or (i == 34 and j > 6 and j < 12))
+			{
+				if (cardCon[10] == 1)
+				{
+					cout << "_";
+				}
+			}
+			else if ((i > 30 and i < 35 and j == 6) or (i > 30 and i < 35 and j == 12))
+			{
+				if (cardCon[10] == 1)
+				{
+					cout << "|";
+				}
+			}
+			else if ((i == 30 and j > 13 and j < 19) or (i == 34 and j > 13 and j < 19))
+			{
+				if (cardCon[15] == 1)
+				{
+					cout << "_";
+				}
+			}
+			else if ((i > 30 and i < 35 and j == 13) or (i > 30 and i < 35 and j == 19))
+				{
+				if (cardCon[15] == 1)
+				{
+					cout << "|";
+				}
+			}
+			else if ((i == 30 and j > 20 and j < 26) or (i == 34 and j > 20 and j < 26))
+			{
+				if (cardCon[16] == 1)
+				{
+					cout << "_";
+				}
+				}
+			else if ((i > 30 and i < 35 and j == 20) or (i > 30 and i < 35 and j == 26))
+			{
+				if (cardCon[16] == 1)
+				{
+					cout << "|";
+				}
+			}
+			else if ((i == 30 and j > 27 and j < 33) or (i == 34 and j > 27 and j < 33))
+			{
+				if (cardCon[17] == 1)
+				{
+					cout << "_";
+				}
+			}
+			else if ((i > 30 and i < 35 and j == 27) or (i > 30 and i < 35 and j == 33))
+			{
+				if (cardCon[17] == 1)
+				{
+					cout << "|";
+				}
+			}
+			else if ((i == 30 and j > 34 and j < 40) or (i == 34 and j > 34 and j < 40))
+			{
+				if (cardCon[18] == 1)
+				{
+					cout << "_";
+				}
+			}
+			else if ((i > 30 and i < 35 and j == 34) or (i > 30 and i < 35 and j == 40))
+			{
+				if (cardCon[18] == 1)
+				{
+					cout << "|";
+				}
+			}
+			else if ((i == 35 and j > 10 and j < 16) or (i == 39 and j > 10 and j < 16))
+			{
+				if (cardCon[19] == 1)
+				{
+					cout << "_";
+				}
+			}
+			else if ((i > 35 and i < 40 and j == 10) or (i > 35 and i < 40 and j == 16))
+			{
+				if (cardCon[19] == 1)
+				{
+					cout << "|";
+				}
+			}
+			else if ((i == 35 and j > 17 and j < 23) or (i == 39 and j > 17 and j < 23))
+			{
+				if (cardCon[20] == 1)
+				{
+					cout << "_";
+				}
+			}
+			else if ((i > 35 and i < 40 and j == 17) or (i > 35 and i < 40 and j == 23))
+			{
+				if (cardCon[20] == 1)
+				{
+					cout << "|";
+				}
+			}
+			else if ((i == 35 and j > 24 and j < 30) or (i == 39 and j > 24 and j < 30))
+			{
+				if (cardCon[21] == 1)
+				{
+					cout << "_";
+				}
+			}
+			else if ((i > 35 and i < 40 and j == 24) or (i > 35 and i < 40 and j == 30))
+			{
+				if (cardCon[21] == 1)
+				{
+					cout << "|";
+				}
+			}
+			else if ((i == 35 and j > 31 and j < 37) or (i == 39 and j > 31 and j < 37))
+			{
+				if (cardCon[22] == 1)
+				{
+					cout << "_";
+				}
+			}
+			else if ((i > 35 and i < 40 and j == 31) or (i > 35 and i < 40 and j == 37))
+			{
+				if (cardCon[22] == 1)
+				{
+					cout << "|";
+				}
+			}
+			else if ((i == 40 and j > 13 and j < 19) or (i == 44 and j > 13 and j < 19))
+			{
+				if (cardCon[23] == 1)
+				{
+					cout << "_";
+				}
+			}
+			else if ((i > 40 and i < 45 and j == 13) or (i > 40 and i < 45 and j == 19))
+			{
+				if (cardCon[23] == 1)
+				{
+					cout << "|";
+				}
+			}
+			else if ((i == 40 and j > 20 and j < 26) or (i == 44 and j > 20 and j < 26))
+			{
+				if (cardCon[24] == 1)
+				{
+					cout << "_";
+				}
+			}
+			else if ((i > 40 and i < 45 and j == 20) or (i > 40 and i < 45 and j == 26))
+			{
+				if (cardCon[24] == 1)
+				{
+					cout << "|";
+				}
+			}
+			else if ((i == 40 and j > 27 and j < 33) or (i == 44 and j > 27 and j < 33))
+			{
+				if (cardCon[25] == 1)
+				{
+					cout << "_";
+				}
+			}
+			else if ((i > 40 and i < 45 and j == 27) or (i > 40 and i < 45 and j == 33))
+			{
+				if (cardCon[25] == 1)
+				{
+					cout << "|";
+				}
+			}
+			else if ((i == 45 and j > 17 and j < 23) or (i == 49 and j > 17 and j < 23))
+			{
+				if (cardCon[26] == 1)
+				{
+					cout << "_";
+				}
+			}
+			else if ((i > 45 and i < 50 and j == 17) or (i > 45 and i < 50 and j == 23))
+			{
+				if (cardCon[26] == 1)
+				{
+					cout << "|";
+				}
+			}
+			else if ((i == 45 and j > 24 and j < 30) or (i == 49 and j > 24 and j < 30))
+			{
+				if (cardCon[27] == 1)
+				{
+					cout << "_";
+				}
+			}
+			else if ((i > 45 and i < 50 and j == 24) or (i > 45 and i < 50 and j == 30))
+			{
+				if (cardCon[27] == 1)
+				{
+					cout << "|";
+				}
+			}
+			else if ((i == 50 and j > 20 and j < 26) or (i == 54 and j > 20 and j < 26))
+			{
+				if (cardCon[28] == 1)
+				{
+					cout << "_";
+				}
+			}
+			else if ((i > 50 and i < 55 and j == 20) or (i > 50 and i < 55 and j == 26))
+			{
+				if (cardCon[28] == 1)
+				{
+					cout << "|";
+				}
+			}
+
 			else
 			{
 				cout << " ";
 			}
+
 		}
 		cout << endl;
 	}
