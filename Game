@@ -685,6 +685,20 @@ void draw()
 					cout << "|";
 				}
 			}
+			else if ((i == 60 and j > 27 and j < 33) or (i == 64 and j > 34 and j < 27))
+			{
+				if (cards > 2)
+				{
+					cout << "_";
+				}
+			}
+			else if ((i > 60 and i < 65 and j == 27) or (i > 60 and i < 65 and j == 33))
+			{
+				if (cards > 2)
+				{
+					cout << "|";
+				}
+			}
 			else
 			{
 				cout << " ";
