@@ -50,213 +50,245 @@ void draw()
 			SetConsoleTextAttribute(h, 129);
 			if ((i == 0 and j > 20 and j < 26) or (i == 4 and j > 20 and j < 26))
 			{
+				SetConsoleTextAttribute(h, 136);
 				if (cardCon[0] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 0 and i < 5 and j == 20) or (i > 0 and i < 5 and j == 26))
 			{
+				SetConsoleTextAttribute(h, 136);
 				if (cardCon[0] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 5 and j > 17 and j < 23) or (i == 9 and j > 17 and j < 23))
 			{
+				SetConsoleTextAttribute(h, 136);
 				if (cardCon[1] == 1)
 				{
-					cout << "_";
+					SetConsoleTextAttribute(h, 129);
 				}
+				cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 5 and i < 10 and j == 17) or (i > 5 and i < 10 and j == 23))
 			{
+				SetConsoleTextAttribute(h, 136);
 				if (cardCon[1] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 5 and j > 24 and j < 30) or (i == 9 and j > 24 and j < 30))
 			{
+				SetConsoleTextAttribute(h, 136);
 				if (cardCon[2] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 5 and i < 10 and j == 24) or (i > 5 and i < 10 and j == 30))
 			{
+				SetConsoleTextAttribute(h, 136);
 				if (cardCon[2] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 10 and j > 13 and j < 19) or (i == 14 and j > 13 and j < 19))
 			{
+				SetConsoleTextAttribute(h, 136);
 				if (cardCon[3] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 10 and i < 15 and j == 13) or (i > 10 and i < 15 and j == 19))
 			{
+				SetConsoleTextAttribute(h, 136);
 				if (cardCon[3] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 10 and j > 20 and j < 26) or (i == 14 and j > 20 and j < 26))
 			{
+				SetConsoleTextAttribute(h, 136);
 				if (cardCon[4] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 10 and i < 15 and j == 20) or (i > 10 and i < 15 and j == 26))
 			{
+				SetConsoleTextAttribute(h, 136);
 				if (cardCon[4] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 10 and j > 27 and j < 33) or (i == 14 and j > 27 and j < 33))
 			{
+				SetConsoleTextAttribute(h, 136);
 				if (cardCon[5] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 10 and i < 15 and j == 27) or (i > 10 and i < 15 and j == 33))
 			{
+				SetConsoleTextAttribute(h, 136);
 				if (cardCon[5] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 15 and j > 10 and j < 16) or (i == 19 and j > 10 and j < 16))
 			{
+				SetConsoleTextAttribute(h, 136);
 				if (cardCon[6] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 15 and i < 20 and j == 10) or (i > 15 and i < 20 and j == 16))
 			{
+				SetConsoleTextAttribute(h, 136);
 				if (cardCon[6] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 15 and j > 17 and j < 23) or (i == 19 and j > 17 and j < 23))
 			{
+				SetConsoleTextAttribute(h, 136);
 				if (cardCon[7] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 15 and i < 20 and j == 17) or (i > 15 and i < 20 and j == 23))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[7] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 15 and j > 24 and j < 30) or (i == 19 and j > 24 and j < 30))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[8] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 15 and i < 20 and j == 24) or (i > 15 and i < 20 and j == 30))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[8] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
+				
 			}
 			else if ((i == 15 and j > 31 and j < 37) or (i == 19 and j > 31 and j < 37))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[9] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 15 and i < 20 and j == 31) or (i > 15 and i < 20 and j == 37))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[9] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 20 and j > 6 and j < 12) or (i == 24 and j > 6 and j < 12))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[10] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 20 and i < 25 and j == 6) or (i > 20 and i < 25 and j == 12))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[10] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 20 and j > 13 and j < 19) or (i == 24 and j > 13 and j < 19))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[11] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 20 and i < 25 and j == 13) or (i > 20 and i < 25 and j == 19))
 				{
+				SetConsoleTextAttribute(h, 136);
 				if (cardCon[11] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 20 and j > 20 and j < 26) or (i == 24 and j > 20 and j < 26))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[12] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 				}
 			else if ((i > 20 and i < 25 and j == 20) or (i > 20 and i < 25 and j == 26))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[12] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 20 and j > 27 and j < 33) or (i == 24 and j > 27 and j < 33))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[13] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 20 and i < 25 and j == 27) or (i > 20 and i < 25 and j == 33))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[13] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 20 and j > 34 and j < 40) or (i == 24 and j > 34 and j < 40))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[14] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 20 and i < 25 and j == 34) or (i > 20 and i < 25 and j == 40))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[14] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			//Permanent
 			else if ((i == 25 and j > 3 and j < 9) or (i == 29 and j > 3 and j < 9))
@@ -313,213 +345,244 @@ void draw()
 
 			else if ((i == 30 and j > 6 and j < 12) or (i == 34 and j > 6 and j < 12))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[15] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 30 and i < 35 and j == 6) or (i > 30 and i < 35 and j == 12))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[15] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 30 and j > 13 and j < 19) or (i == 34 and j > 13 and j < 19))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[16] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 30 and i < 35 and j == 13) or (i > 30 and i < 35 and j == 19))
 				{
+				SetConsoleTextAttribute(h, 136);
 				if (cardCon[16] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 30 and j > 20 and j < 26) or (i == 34 and j > 20 and j < 26))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[17] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 				}
 			else if ((i > 30 and i < 35 and j == 20) or (i > 30 and i < 35 and j == 26))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[17] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 30 and j > 27 and j < 33) or (i == 34 and j > 27 and j < 33))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[18] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 30 and i < 35 and j == 27) or (i > 30 and i < 35 and j == 33))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[18] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 30 and j > 34 and j < 40) or (i == 34 and j > 34 and j < 40))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[19] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 30 and i < 35 and j == 34) or (i > 30 and i < 35 and j == 40))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[19] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 35 and j > 10 and j < 16) or (i == 39 and j > 10 and j < 16))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[20] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 35 and i < 40 and j == 10) or (i > 35 and i < 40 and j == 16))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[20] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 35 and j > 17 and j < 23) or (i == 39 and j > 17 and j < 23))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[21] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 35 and i < 40 and j == 17) or (i > 35 and i < 40 and j == 23))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[21] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 35 and j > 24 and j < 30) or (i == 39 and j > 24 and j < 30))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[22] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 35 and i < 40 and j == 24) or (i > 35 and i < 40 and j == 30))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[22] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 35 and j > 31 and j < 37) or (i == 39 and j > 31 and j < 37))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[23] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 35 and i < 40 and j == 31) or (i > 35 and i < 40 and j == 37))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[23] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 40 and j > 13 and j < 19) or (i == 44 and j > 13 and j < 19))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[24] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 40 and i < 45 and j == 13) or (i > 40 and i < 45 and j == 19))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[24] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 40 and j > 20 and j < 26) or (i == 44 and j > 20 and j < 26))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[25] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 40 and i < 45 and j == 20) or (i > 40 and i < 45 and j == 26))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[25] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 40 and j > 27 and j < 33) or (i == 44 and j > 27 and j < 33))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[26] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 40 and i < 45 and j == 27) or (i > 40 and i < 45 and j == 33))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[26] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 45 and j > 17 and j < 23) or (i == 49 and j > 17 and j < 23))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[27] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 45 and i < 50 and j == 17) or (i > 45 and i < 50 and j == 23))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[27] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 45 and j > 24 and j < 30) or (i == 49 and j > 24 and j < 30))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[28] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 45 and i < 50 and j == 24) or (i > 45 and i < 50 and j == 30))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[28] == 1)
 				{
-					cout << "|";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 50 and j > 20 and j < 26) or (i == 54 and j > 20 and j < 26))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[29] == 1)
 				{
-					cout << "_";
-				}
+					SetConsoleTextAttribute(h, 129);
+				}cout << "_"; SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 50 and i < 55 and j == 20) or (i > 50 and i < 55 and j == 26))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cardCon[29] == 1)
 				{
-					cout << "|";
+					SetConsoleTextAttribute(h, 129);
 				}
+				cout << "|"; SetConsoleTextAttribute(h, 136);
 			}
 			else if (i == 26 and j == 6)
 			{
@@ -659,45 +722,63 @@ void draw()
 				}
 			else if ((i == 60 and j > 41 and j < 47) or (i == 64 and j > 41 and j < 47))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cards > 0)
 				{
-					cout << "_";
+					SetConsoleTextAttribute(h, 129);
 				}
+				cout << "_";
+				SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 60 and i < 65 and j == 41) or (i > 60 and i < 65 and j == 47))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cards > 0)
 				{
-					cout << "|";
+					SetConsoleTextAttribute(h, 129);
 				}
+				cout << "|";
+				SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 60 and j > 34 and j < 40) or (i == 64 and j > 34 and j < 40))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cards > 1)
 				{
-					cout << "_";
+					SetConsoleTextAttribute(h, 129);
 				}
+				cout << "_";
+				SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 60 and i < 65 and j == 34) or (i > 60 and i < 65 and j == 40))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cards > 1)
 				{
-					cout << "|";
+					SetConsoleTextAttribute(h, 129);
 				}
+				cout << "|";
+				SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i == 60 and j > 27 and j < 33) or (i == 64 and j > 27 and j < 33))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cards > 2)
 				{
-					cout << "_";
+					SetConsoleTextAttribute(h, 129);
 				}
+				cout << "_";
+				SetConsoleTextAttribute(h, 136);
 			}
 			else if ((i > 60 and i < 65 and j == 27) or (i > 60 and i < 65 and j == 33))
 			{
+			SetConsoleTextAttribute(h, 136);
 				if (cards > 2)
 				{
-					cout << "|";
+					SetConsoleTextAttribute(h, 129);
 				}
+				cout << "|";
+				SetConsoleTextAttribute(h, 136);
 			}
 			else
 			{
@@ -775,3 +856,8 @@ int main()
     }
 }
  
+	// _____   _____   _____   _____   _____   _____
+	//| xor | |     | |     | |     | |     | |     |
+	//|  |  | |     | |     | |     | |     | |     |
+	//| \|/ | |     | |     | |     | |     | |     |
+	//|__0__| |_____| |_____| |_____| |_____| |_____|
