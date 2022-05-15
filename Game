@@ -9,25 +9,24 @@ using namespace std;
 bool game = 1;
 
 int width = 47;
-int height = 65;
+int height = 69;
 
 int choose = 0;
 
 bool cardCon[30] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
-bool variation[6] = { 0, 0, 0, 0, 0, 0 }; 
+bool variation[6] = { 0, 0, 0, 0, 0, 0 };
 
-enum eDirection { UP, DOWN, LEFT, RIGHT, STOP };
+int cards = 0;
+
+enum eDirection { UP, DOWN, LEFT, RIGHT, STOP, withdraw};
 eDirection way;
 
 HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
 void choice()
 {
-	for (int i = 0; i < 30; i++)
-	{
-		cardCon[i] = 1;
-	}
+	
 }
 
 void clear()
@@ -654,6 +653,38 @@ void draw()
 					cout << "0";
 				}
 			}
+			else if (i == 51 and j == 45)
+				{
+					cout << "Withdraw a card PRESS Q";
+				}
+			else if ((i == 60 and j > 41 and j < 47) or (i == 64 and j > 41 and j < 47))
+			{
+				if (cards > 0)
+				{
+					cout << "_";
+				}
+			}
+			else if ((i > 60 and i < 65 and j == 41) or (i > 60 and i < 65 and j == 47))
+			{
+				if (cards > 0)
+				{
+					cout << "|";
+				}
+			}
+			else if ((i == 60 and j > 34 and j < 40) or (i == 64 and j > 34 and j < 40))
+			{
+				if (cards > 1)
+				{
+					cout << "_";
+				}
+			}
+			else if ((i > 60 and i < 65 and j == 34) or (i > 60 and i < 65 and j == 40))
+			{
+				if (cards > 1)
+				{
+					cout << "|";
+				}
+			}
 			else
 			{
 				cout << " ";
@@ -679,6 +710,10 @@ void Logic()
 	case STOP:
 		choose = choose;
 		break;
+	case withdraw:
+		cards++;
+		way = STOP;
+		break;
 	}
 }
 
@@ -694,6 +729,9 @@ void Input()
 
 		case 'd':
 			way = RIGHT;
+			break;
+		case 'q':
+			way = withdraw;
 			break;
 		}
 	}
@@ -722,10 +760,9 @@ int main()
         clear();
     }
 }
-
-	/*_____   _____   _____   _____   _____   _____
-	| xor | |     | |     | |     | |     | |     |
-	|  |  | |     | |     | |     | |     | |     |
-	| \|/ | |     | |     | |     | |     | |     |
-	|__0__| |_____| |_____| |_____| |_____| |_____|
-	*/
+ 
+	// _____   _____   _____   _____   _____   _____
+	//| xor | |     | |     | |     | |     | |     |
+	//|  |  | |     | |     | |     | |     | |     |
+	//| \|/ | |     | |     | |     | |     | |     |
+	//|__0__| |_____| |_____| |_____| |_____| |_____|
