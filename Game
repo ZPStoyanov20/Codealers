@@ -15,7 +15,9 @@ int choose = 0;
 
 bool cardCon[30] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
-short int variation[6] = { 0, 0, 0, 0, 0, 0 };
+bool conatin[30];
+
+short int variation[6] = { 0, 0, 0, 0, 0, 0 }; 
 
 enum eDirection { UP, DOWN, LEFT, RIGHT, STOP };
 eDirection way;
@@ -24,32 +26,23 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
 void choice()
 {
-	if (choose < 0)
+	for (int i = 0; i < 30; i++)
 	{
-		choose = 29;
+		cardCon[i] = 1;
 	}
-	if (choose > 29)
-	{
-		choose = 0;
-	}
-	for (int i = 0; i <= 29; i++)
-	{
-		cardCon[i] = 0;
-	}
-	cardCon[choose] = 1;
 }
 
 void variationRandomizer()
 {
 	for (int i = 0; i < 6; i++)
 	{
-		if (rand() % 1 == 0)
+		if  (rand() % 1 == 1)
 		{
-			variation[i] == 0;
+			variation[i] = 0;
 		}
 		else
 		{
-			variation[i] == 1;
+			variation[i] = 1;
 		}
 	}
 }
@@ -546,7 +539,72 @@ void draw()
 					cout << "|";
 				}
 			}
-
+			else if (i == 26 and j == 6)
+			{
+				if (variation[0] == 1)
+				{
+					cout << "1";
+				}
+				else
+				{
+					cout << "0";
+				}
+			}
+			else if (i == 28 and j == 6)
+			{
+				if (variation[0] == 0)
+				{
+					cout << "1";
+				}
+				else
+				{
+					cout << "0";
+				}
+			}
+			else if (i == 26 and j == 13)
+			{
+				if (variation[1] == 1)
+				{
+					cout << "1";
+				}
+				else
+				{
+					cout << "0";
+				}
+			}
+			else if (i == 28 and j == 13)
+			{
+				if (variation[1] == 0)
+				{
+					cout << "1";
+				}
+				else
+				{
+					cout << "0";
+				}
+			}
+			else if (i == 26 and j == 20)
+			{
+				if (variation[2] == 1)
+				{
+					cout << "1";
+				}
+				else
+				{
+					cout << "0";
+				}
+			}
+			else if (i == 28 and j == 20)
+			{
+				if (variation[2] == 0)
+				{
+					cout << "1";
+				}
+				else
+				{
+					cout << "0";
+				}
+			}
 			else
 			{
 				cout << " ";
@@ -594,12 +652,12 @@ void Input()
 
 int main()
 {
+	srand(time(0));
 	variationRandomizer();
-    srand(time(0));
     while (game == true)
     {
-        draw();
 		choice();
+        draw();
 		Input();
 		Logic();
         clear();
