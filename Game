@@ -15,11 +15,13 @@ int choose = 0;
 
 bool cardCon[30] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
+bool Stick[30] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
 bool variation[6] = { 0, 0, 0, 0, 0, 0 };
 
 int cards = 0;
 
-enum eDirection { UP, DOWN, LEFT, RIGHT, STOP, withdraw};
+enum eDirection { UP, DOWN, LEFT, RIGHT, STOP, withdraw, PUT};
 eDirection way;
 
 HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -38,7 +40,16 @@ void choice()
 	{
 		cardCon[i] = 0;
 	}
+
 	cardCon[choose] = 1;
+
+	for (int i = 0; i <= 29; i++)
+	{
+		if (Stick[i] == 1)
+		{
+			cardCon[i] = 1;
+		}
+	}
 }
 
 void clear()
@@ -821,6 +832,14 @@ void Logic()
 		cards++;
 		way = STOP;
 		break;
+	case PUT:
+		if (cards > 0)
+		{
+			Stick[choose] = 1;
+			cards--;
+		}
+		way = STOP;
+		break;
 	}
 }
 
@@ -839,6 +858,10 @@ void Input()
 			break;
 		case 'q':
 			way = withdraw;
+			break;
+
+		case 'e':
+			way = PUT;
 			break;
 		}
 	}
