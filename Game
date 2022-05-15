@@ -38,44 +38,32 @@ void draw()
 	{
 		for (int j = 0; j <= width; j++)
 		{
-			if (cardCon[0] == 1)
+
+			if ((i == 0 and j > 20 and j < 26) or (i == 4 and j > 20 and j < 26))
 			{
-				if ((i == 0 and j > 20 and j < 26) or (i == 4 and j > 20 and j < 26))
+				if (cardCon[0] == 1)
 				{
 					cout << "_";
 				}
-				else if ((i > 0 and i < 5 and j == 20) or (i > 0 and i < 5 and j == 26))
+			}
+			else if ((i > 0 and i < 5 and j == 20) or (i > 0 and i < 5 and j == 26))
+			{
+				if (cardCon[0] == 1)
 				{
 					cout << "|";
 				}
-				else
-				{
-					if (!((i >= 0 and i < 5) and (j >= 20 and j <= 26)))
-					{
-						cout << " "; 
-					}
-				}
 			}
-			if (cardCon[1] == 1)
+			else if ((i == 5 and j > 17 and j < 23) or (i == 9 and j > 17 and j < 23))
 			{
-				if (i >= 5 and i <= 10 and j >= 17 and j <= 23)
-				{
-					if ((i == 5 and j > 17 and j < 23) or (i == 10 and j > 17 and j <= 23))
-					{
-						cout << "_";
-					}
-					else if ((i > 5 and i < 10 and j == 17) or (i > 5 and i < 10 and j == 23))
-					{
-						cout << "|";
-					}
-					else
-					{
-						if (!(i >= 5 and i <= 10 and j >= 17 and j <= 23))
-						{
-							cout << " ";
-						}
-					}
-				}
+				cout << "_";
+			}
+			else if ((i > 5 and i < 10 and j == 17) or (i > 5 and i < 10 and j == 23))
+			{
+				cout << "|";
+			}
+			else
+			{
+				cout << " ";
 			}
 		}
 		cout << endl;
