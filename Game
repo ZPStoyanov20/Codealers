@@ -6,31 +6,33 @@
 
 using namespace std;
 
-bool game = 1;
+bool game = 1; //Game is On or Off
 
-int width = 47;
-int height = 69;
+int width = 47; 
+int height = 69;// How big is the map of the game
 
 int choose = 0;
 
-bool cardCon[30] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+bool cardCon[30] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }; // if the cards are visible
 
-bool Stick[30] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+bool Stick[30] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }; // if the cards are forever visible (buton E)
 
-bool variation[6] = { 0, 0, 0, 0, 0, 0 };
+bool variation[6] = { 0, 0, 0, 0, 0, 0 }; // if the cards are 1 or 0
 
-bool menuOn = 1;
+bool menuOn = 1; // if the menu is visible
 
-bool HTPon = 0;
+bool HTPon = 0; // if the "HOW TO PLAY" is visible
 
-int cards = 0;
+int cards = 0; //The number of the cards
 
 enum eDirection { UP, DOWN, LEFT, RIGHT, STOP, withdraw, PUT, START, BACK, HTP};
-eDirection way;
+eDirection way; //The input of the keys
 
-HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE); // Color
 
-void menu()
+
+
+void menu() // What we see on the menu
 {
 	SetConsoleTextAttribute(h, 139);
 	cout << "CODEALERS!" << endl << endl << endl << endl; 
@@ -38,16 +40,16 @@ void menu()
 	cout << "2. HOW TO PLAY";
 }
 
-void tutorial()
+void tutorial() // What we se on the tutorial
 {
 	cout << "Press B to go back to menu" << endl;
 	cout << "Press Q to get a card" << endl;
 	cout << "Move with A and D" << endl;
 	cout << "Press E to put a card" << endl;
-	cout << "Card have limit" << endl;
+	cout << "Cards have limit" << endl;
 }
 
-void choice()
+void choice() // Whta happens after pressing "E"
 {
 	if (choose > 29)
 	{
@@ -73,7 +75,7 @@ void choice()
 	}
 }
 
-void clear()
+void clear() // To clear all written
 {
     HANDLE hOut;
     COORD Position;
@@ -85,7 +87,7 @@ void clear()
     SetConsoleCursorPosition(hOut, Position);
 }
 
-void draw()
+void draw() // Visualising the game
 {
 	if (menuOn == 0 and HTPon == 0)
 	{
@@ -897,15 +899,15 @@ void draw()
 	}
 	if (HTPon == 1 and menuOn == 0)
 	{
-		tutorial();
+		tutorial(); // Show the "HOW TO PLAY" page
 	}
 	if (menuOn == 1 and HTPon == 0)
 	{
-		menu();
+		menu(); // show the menu
 	}
 }
 
-void Logic()
+void Logic() //What happens after using the Iput function
 {
 	switch (way)
 	{
@@ -952,7 +954,7 @@ void Logic()
 	}
 }
 
-void Input()
+void Input() //Define the Input keys
 {
 	
 	if (_kbhit())
@@ -985,6 +987,13 @@ void Input()
 		case 'e':
 			way = PUT;
 			break;
+
+		case 'w':
+			way = UP;
+			break;
+		case 's':
+			way = DOWN;
+			break;
 			}
 		}
 	}
@@ -992,8 +1001,8 @@ void Input()
 
 int main()
 {
-	srand(time(0));
-	for (int i = 0; i < 6; i++)
+	srand(time(0)); // Makes all randomised
+	for (int i = 0; i < 6; i++) // Randomizes the if the cards are 0 or 1
 	{
 		if (rand() % 2 == 1)
 		{
@@ -1014,8 +1023,3 @@ int main()
     }
 }
  
-	// _____   _____   _____   _____   _____   _____
-	//| xor | |     | |     | |     | |     | |     |
-	//|  |  | |     | |     | |     | |     | |     |
-	//| \|/ | |     | |     | |     | |     | |     |
-	//|__0__| |_____| |_____| |_____| |_____| |_____|
