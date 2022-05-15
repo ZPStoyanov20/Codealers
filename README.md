@@ -8,4 +8,8 @@
   <h2> More information </h2>
   - 🔭 We are currently working on our project!
   <br>
- 
+  - ⚡ We thought, it is easier to be a programmer!
+  <br>
+  <h2 align="center">💻Information For The Project💻</a></h2>
+  - We had to make video game using C++! <br>
+  - The team is formed with four students from the same class!
