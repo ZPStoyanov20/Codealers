@@ -26,3 +26,15 @@
 
 <p>Zafir Plamenov Stoyanov - ZPStoyanov20@codingburgas.bg🙆‍♂‍</p>  <br>
   <br>
+<h2 align="center">To create this project we have used:</a></h2>
+<img align="right" height="300" width="500" alt="" src="https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif">
+ <p>👨‍💻 𝐆𝐢𝐭𝐡𝐮𝐛 </p>
+ 
+ <p>👨‍💻 𝗠𝗶𝗰𝗿𝗼𝘀𝗼𝗳𝘁 𝗧𝗲𝗮𝗺𝘀 </p>
+ 
+ <p>👨‍💻 𝗩𝗶𝘀𝘂𝗮𝗹 𝗦𝘁𝘂𝗱𝗶𝗼 </p>
+ 
+ <p>👨‍💻 𝗠𝗶𝗰𝗿𝗼𝘀𝗼𝗳𝘁 𝗪𝗼𝗿𝗱 </p>
+ 
+ <p>👨‍💻 𝙈𝙞𝙘𝙧𝙤𝙨𝙤𝙛𝙩 𝙋𝙤𝙬𝙚𝙧𝙋𝙤𝙞𝙣𝙩 </p>
+ <p>👨‍💻 𝗗𝗶𝘀𝗰𝗼𝗿𝗱 </p>
