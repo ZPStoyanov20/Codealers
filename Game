@@ -6,492 +6,88 @@
 
 using namespace std;
 
-bool gameOver;
+bool game = 1;
 
-enum eDirection {up, down, LEFT, RIGHT, STOP};
+int width = 47;
+int height = 65;
+
+bool cardCon[36] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+
+short int variation[6] = {1, 1, 1, 1, 1, 1};
+
+enum eDirection { UP, DOWN, LEFT, RIGHT, STOP };
 eDirection way;
 
 HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
-int charX = 5;
-int charY = 5;
-
-int monsX = 13;
-int monsY = 13;
-
-int monsVision;
-
-bool monsApp = 0;
-
-void appear()
+void clear()
 {
-	if (rand() % 10 == 5)
-	{
- 		monsApp = 1;
-	}
-}
-
-void killCheck()
-{
-}
-
-void monsWalk()
-{
-	int value = rand() % 4;
-	monsVision = value;
-	if (value == 1)
-	{
-		monsX++;
-	}
-	else if (value == 2)
-	{
-		monsX--;
-	}
-	else if (value == 3)
-	{
-		monsY++;
-	}
-	else
-	{
-		monsY--;
-	}
-}
-
-void kill()
-{
-	if (rand() % 2 == 1)
-	{
-		if (charX > monsX)
-		{
-			monsX++;
-		}
-		if (charX < monsX)
-		{
-			monsX--;
-		}
-	}
-	else
-	{
-		if (charY > monsY)
-		{
-			monsY++;
-		}
-		if (charY < monsY)
-		{
-			monsY--;
-		}
-	}
-}
-
-void clear() 
-{
-	HANDLE hOut;
+    HANDLE hOut;
     COORD Position;
 
-    hOut = GetStdHandle(STD_OUTPUT_HANDLE);                          
+    hOut = GetStdHandle(STD_OUTPUT_HANDLE);
 
     Position.X = 0;
     Position.Y = 0;
     SetConsoleCursorPosition(hOut, Position);
 }
 
-void Barrier()
+void draw()
 {
-	if (charX == 0)
+	for (int i = 0; i <= height; i++)
 	{
-		charX++;
-	}
-	if (charY == 14)
-	{
-		charY--;
-	}
-	if (charY == 0)
-	{
-		charY++;
-	}
-	if (charX == 29)
-	{
-		charX--;
-	}
-}
-
-void monsBarrier()
-{
-	if (monsX == 0)
-	{
-		monsX++;
-	}
-	if (monsY == 14)
-	{
-		monsY--;
-	}
-	if (monsY == 0)
-	{
-		monsY++;
-	}
-	if (monsX == 29)
-	{
-		monsX--;
-	}
-}
-
-int colorCorrection = 0;
-
-void Draw()
-{
-	clear();
-	for (int i = 0; i < 15; i++)
-	{
-		for (int j = 0; j < 30; j++)
+		for (int j = 0; j <= width; j++)
 		{
-			if (i == 0 or i == 14 or j == 0 or j == 29)
+			if (cardCon[0] == 1)
 			{
-				SetConsoleTextAttribute(h, 384);
-				cout << " ";
-				SetConsoleTextAttribute(h, 15);
-			}
-			else if (charX == j and charY == i)
-			{
-				SetConsoleTextAttribute(h, 352);
-				cout << "o";
-				SetConsoleTextAttribute(h, 15);
-			}
-			else if (monsX == j and monsY == i)
-			{
-				SetConsoleTextAttribute(h, 352);
-				cout << "0";
-				SetConsoleTextAttribute(h, 15);
-			}
-
-			//UP
-
-			else if (monsX >= j and monsX < j + 1 and monsY > i and monsY < i + 6)
-			{
-				if (monsVision == 0)
+				if ((i == 0 and j > 20 and j < 26) or (i == 4 and j > 20 and j < 26))
 				{
-					colorCorrection = 0;
+					cout << "_";
+				}
+				else if ((i > 0 and i < 5 and j == 20) or (i > 0 and i < 5 and j == 26))
+				{
+					cout << "|";
 				}
 				else
 				{
-					colorCorrection = 152;
+					if (!((i >= 0 and i < 5) and (j >= 20 and j <= 26)))
+					{
+						cout << " "; 
+					}
 				}
-				SetConsoleTextAttribute(h, 200 + colorCorrection);
-				cout << " ";
-				SetConsoleTextAttribute(h, 15);
 			}
-			else if (monsX > j - 2 and monsX < j + 2 and monsY > i + 1 and monsY < i + 6)
+			if (cardCon[1] == 1)
 			{
-				if (monsVision == 0)
+				if (i >= 5 and i <= 10 and j >= 17 and j <= 23)
 				{
-					colorCorrection = 0;
+					if ((i == 5 and j > 17 and j < 23) or (i == 10 and j > 17 and j <= 23))
+					{
+						cout << "_";
+					}
+					else if ((i > 5 and i < 10 and j == 17) or (i > 5 and i < 10 and j == 23))
+					{
+						cout << "|";
+					}
+					else
+					{
+						if (!(i >= 5 and i <= 10 and j >= 17 and j <= 23))
+						{
+							cout << " ";
+						}
+					}
 				}
-				else
-				{
-					colorCorrection = 152;
-				}
-				SetConsoleTextAttribute(h, 200 + colorCorrection);
-				cout << " ";
-				SetConsoleTextAttribute(h, 15);
 			}
-			else if (monsX > j - 3 and monsX < j + 3 and monsY > i + 2 and monsY < i + 6)
-			{
-				if (monsVision == 0)
-				{
-					colorCorrection = 0;
-				}
-				else
-				{
-					colorCorrection = 152;
-				}
-				SetConsoleTextAttribute(h, 200 + colorCorrection);
-				cout << " ";
-				SetConsoleTextAttribute(h, 15);
-			}
-			else if (monsX > j - 4 and monsX < j + 4 and monsY > i + 3 and monsY < i + 6)
-			{
-				if (monsVision == 0)
-				{
-					colorCorrection = 0;
-				}
-				else
-				{
-					colorCorrection = 152;
-				}
-				SetConsoleTextAttribute(h, 200 + colorCorrection);
-				cout << " ";
-				SetConsoleTextAttribute(h, 15);
-			}
-			else if (monsX > j - 5 and monsX < j + 5 and monsY > i + 4 and monsY < i + 6)
-			{
-				if (monsVision == 0)
-				{
-					colorCorrection = 0;
-				}
-				else
-				{
-					colorCorrection = 152;
-				}
-				SetConsoleTextAttribute(h, 200 + colorCorrection);
-				cout << " ";
-				SetConsoleTextAttribute(h, 15);
-			}
-			//down
-			else if (monsX >= j and monsX < j + 1 and monsY < i and monsY > i - 6)
-			{
-				if (monsVision == 3)
-				{
-					colorCorrection = 0;
-				}
-				else
-				{
-					colorCorrection = 152;
-				}
-				SetConsoleTextAttribute(h, 200 + colorCorrection);
-				cout << " ";
-				SetConsoleTextAttribute(h, 15);
-			}
-			else if (monsX > j - 2 and monsX < j + 2 and monsY < i - 1 and monsY > i - 6)
-			{
-				if (monsVision == 3)
-				{
-					colorCorrection = 0;
-				}
-				else
-				{
-					colorCorrection = 152;
-				}
-				SetConsoleTextAttribute(h, 200 + colorCorrection);
-				cout << " ";
-				SetConsoleTextAttribute(h, 15);
-			}
-			else if (monsX > j - 3 and monsX < j + 3 and monsY < i - 2 and monsY > i - 6)
-			{
-				if (monsVision == 3)
-				{
-					colorCorrection = 0;
-				}
-				else
-				{
-					colorCorrection = 152;
-				}
-				SetConsoleTextAttribute(h, 200 + colorCorrection);
-				cout << " ";
-				SetConsoleTextAttribute(h, 15);
-			}
-			else if (monsX > j - 4 and monsX < j + 4 and monsY < i - 3 and monsY > i - 6)
-			{
-				if (monsVision == 3)
-				{
-					colorCorrection = 0;
-				}
-				else
-				{
-					colorCorrection = 152;
-				}
-				SetConsoleTextAttribute(h, 200 + colorCorrection);
-				cout << " ";
-				SetConsoleTextAttribute(h, 15);
-			}
-			else if (monsX > j - 5 and monsX < j + 5 and monsY < i - 4 and monsY > i - 6)
-			{
-				if (monsVision == 3)
-				{
-					colorCorrection = 0;
-				}
-				else
-				{
-					colorCorrection = 152;
-				}
-				SetConsoleTextAttribute(h, 200 + colorCorrection);
-				cout << " ";
-				SetConsoleTextAttribute(h, 15);
-			}
-			//right
-			else if (monsX <= j and monsX >= j - 5 and monsY >= i and monsY < i + 1)
-			{
-				if (monsVision == 1)
-				{
-					colorCorrection = 0;
-				}
-				else
-				{
-					colorCorrection = 152;
-				}
-				SetConsoleTextAttribute(h, 200 + colorCorrection);
-				cout << " ";
-				SetConsoleTextAttribute(h, 15);
-			}
-			else if (monsX > j - 6 and monsX < j - 1 and monsY > i - 2 and monsY < i + 2)
-			{
-				if (monsVision == 1)
-				{
-					colorCorrection = 0;
-				}
-				else
-				{
-					colorCorrection = 152;
-				}
-				SetConsoleTextAttribute(h, 200 + colorCorrection);
-				cout << " ";
-				SetConsoleTextAttribute(h, 15);
-			}
-			else if (monsX > j - 6 and monsX < j - 2 and monsY > i - 3 and monsY < i + 3)
-			{
-				if (monsVision == 1)
-				{
-					colorCorrection = 0;
-				}
-				else
-				{
-					colorCorrection = 152;
-				}
-				SetConsoleTextAttribute(h, 200 + colorCorrection);
-				cout << " ";
-				SetConsoleTextAttribute(h, 15);
-			}
-			else if (monsX > j - 6 and monsX < j - 3 and monsY > i - 4 and monsY < i + 4)
-			{
-				if (monsVision == 1)
-				{
-					colorCorrection = 0;
-				}
-				else
-				{
-					colorCorrection = 152;
-				}
-				SetConsoleTextAttribute(h, 200 + colorCorrection);
-				cout << " ";
-				SetConsoleTextAttribute(h, 15);
-			}
-			else if (monsX > j - 6 and monsX < j - 4 and monsY > i - 5 and monsY < i + 5)
-			{
-				if (monsVision == 1)
-				{
-					colorCorrection = 0;
-				}
-				else
-				{
-					colorCorrection = 152;
-				}
-				SetConsoleTextAttribute(h, 200 + colorCorrection);
-				cout << " ";
-				SetConsoleTextAttribute(h, 15);
-			}
-			//left
-			else if (monsX >= j and monsX <= j + 5 and monsY >= i and monsY < i + 1)
-			{
-				if (monsVision == 2)
-				{
-					colorCorrection = 0;
-				}
-				else
-				{
-					colorCorrection = 152;
-				}
-			SetConsoleTextAttribute(h, 200 + colorCorrection);
-			cout << " ";
-			SetConsoleTextAttribute(h, 15);
-			}
-			else if (monsX < j + 6 and monsX > j + 1 and monsY > i - 2 and monsY < i + 2)
-			{
-				if (monsVision == 2)
-				{
-					colorCorrection = 0;
-				}
-				else
-				{
-					colorCorrection = 152;
-				}
-			SetConsoleTextAttribute(h, 200 + colorCorrection);
-			cout << " ";
-			SetConsoleTextAttribute(h, 15);
-			}
-			else if (monsX < j + 6 and monsX > j + 2 and monsY > i - 3 and monsY < i + 3)
-			{
-				if (monsVision == 2)
-				{
-					colorCorrection = 0;
-				}
-				else
-				{
-					colorCorrection = 152;
-				}
-			SetConsoleTextAttribute(h, 200 + colorCorrection);
-			cout << " ";
-			SetConsoleTextAttribute(h, 15);
-			}
-			else if (monsX < j + 6 and monsX > j + 3 and monsY > i - 4 and monsY < i + 4)
-			{
-				if (monsVision == 2)
-				{
-					colorCorrection = 0;
-				}
-				else
-				{
-					colorCorrection = 152;
-				}
-			SetConsoleTextAttribute(h, 200 + colorCorrection);
-			cout << " ";
-			SetConsoleTextAttribute(h, 15);
-			}
-			else if (monsX < j + 6 and monsX > j + 4 and monsY > i - 5 and monsY < i + 5)
-			{
-				if (monsVision == 2)
-				{
-					colorCorrection = 0;
-				}
-				else
-				{
-					colorCorrection = 152;
-				}
-			SetConsoleTextAttribute(h, 200 + colorCorrection);
-			cout << " ";
-			SetConsoleTextAttribute(h, 15);
-			}
-			//
-			else
-			{
-				SetConsoleTextAttribute(h, 352);
-				cout << " ";
-				SetConsoleTextAttribute(h, 15);
-			}
-			Barrier();
-			monsBarrier();
 		}
 		cout << endl;
 	}
-	appear();
-	if (monsApp == 1)
-	{
-		monsWalk();
-	}
-	Sleep(200);
-}
-
-void Setup()
-{
-	gameOver = false;
 }
 
 void Logic()
 {
 	switch (way)
 	{
-	case up:
-		charY--;
-		break;
-	case down:
-		charY++;
-		break;
-	case LEFT:
-		charX--;
-		break;
-	case RIGHT:
-		charX++;
-		break;
-	case STOP:
-		charY = charY;
-		charX = charX;
+	case UP:
+		
 		break;
 	}
 }
@@ -505,30 +101,24 @@ void Input()
 		case 'a':
 			way = LEFT;
 			break;
-		case 'd':
-			way = RIGHT;
-			break;
-		case 'w':
-			way = up;
-			break;
-		case 's':
-			way = down;
-			break;
-		case ' ':
-			way = STOP  ;
-			break;
 		}
 	}
 }
+
 int main()
 {
-	srand(time(0));
-	Setup();
-	while (!gameOver)
-	{
-		Draw();
+    srand(time(0));
+    while (game == true)
+    {
+        draw();
 		Input();
 		Logic();
-	}
-	return 0;
+        clear();
+    }
 }
+
+	// _____   _____   _____   _____   _____   _____
+	//| xor | |     | |     | |     | |     | |     |
+	//|  |  | |     | |     | |     | |     | |     |
+	//| \|/ | |     | |     | |     | |     | |     |
+	//|__0__| |_____| |_____| |_____| |_____| |_____|
