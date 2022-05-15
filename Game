@@ -90,7 +90,7 @@ void draw()
 			}
 			else if ((i > 10 and i < 15 and j == 13) or (i > 10 and i < 15 and j == 19))
 			{
-				if (cardCon[4] == 1)
+				if (cardCon[3] == 1)
 				{
 					cout << "|";
 				}
@@ -111,14 +111,70 @@ void draw()
 			}
 			else if ((i == 10 and j > 27 and j < 33) or (i == 14 and j > 27 and j < 33))
 			{
-				if (cardCon[4] == 1)
+				if (cardCon[5] == 1)
 				{
 					cout << "_";
 				}
 			}
 			else if ((i > 10 and i < 15 and j == 27) or (i > 10 and i < 15 and j == 33))
 			{
-				if (cardCon[4] == 1)
+				if (cardCon[5] == 1)
+				{
+					cout << "|";
+				}
+			}
+			else if ((i == 15 and j > 10 and j < 16) or (i == 19 and j > 10 and j < 16))
+			{
+				if (cardCon[6] == 1)
+				{
+					cout << "_";
+				}
+			}
+			else if ((i > 15 and i < 20 and j == 10) or (i > 15 and i < 20 and j == 16))
+			{
+				if (cardCon[6] == 1)
+				{
+					cout << "|";
+				}
+			}
+			else if ((i == 15 and j > 17 and j < 23) or (i == 19 and j > 17 and j < 23))
+			{
+				if (cardCon[7] == 1)
+				{
+					cout << "_";
+				}
+			}
+			else if ((i > 15 and i < 20 and j == 17) or (i > 15 and i < 20 and j == 23))
+			{
+				if (cardCon[7] == 1)
+				{
+					cout << "|";
+				}
+			}
+			else if ((i == 15 and j > 24 and j < 30) or (i == 19 and j > 24 and j < 30))
+			{
+				if (cardCon[8] == 1)
+				{
+					cout << "_";
+				}
+			}
+			else if ((i > 15 and i < 20 and j == 24) or (i > 15 and i < 20 and j == 30))
+			{
+				if (cardCon[8] == 1)
+				{
+					cout << "|";
+				}
+			}
+			else if ((i == 15 and j > 31 and j < 37) or (i == 19 and j > 31 and j < 37))
+			{
+				if (cardCon[8] == 1)
+				{
+					cout << "_";
+				}
+			}
+			else if ((i > 15 and i < 20 and j == 31) or (i > 15 and i < 20 and j == 37))
+			{
+				if (cardCon[8] == 1)
 				{
 					cout << "|";
 				}
