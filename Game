@@ -13,32 +13,32 @@ int height = 69;
 
 int choose = 0;
 
-bool cardCon[30] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+bool cardCon[30] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
 bool variation[6] = { 0, 0, 0, 0, 0, 0 };
 
 int cards = 0;
 
-enum eDirection { UP, DOWN, LEFT, RIGHT, STOP, withdraw };
+enum eDirection { UP, DOWN, LEFT, RIGHT, STOP, withdraw};
 eDirection way;
 
 HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
 void choice()
 {
-
+	
 }
 
 void clear()
 {
-	HANDLE hOut;
-	COORD Position;
+    HANDLE hOut;
+    COORD Position;
 
-	hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+    hOut = GetStdHandle(STD_OUTPUT_HANDLE);
 
-	Position.X = 0;
-	Position.Y = 0;
-	SetConsoleCursorPosition(hOut, Position);
+    Position.X = 0;
+    Position.Y = 0;
+    SetConsoleCursorPosition(hOut, Position);
 }
 
 void draw()
@@ -47,7 +47,7 @@ void draw()
 	{
 		for (int j = 0; j <= width; j++)
 		{
-
+			SetConsoleTextAttribute(h, 129);
 			if ((i == 0 and j > 20 and j < 26) or (i == 4 and j > 20 and j < 26))
 			{
 				if (cardCon[0] == 1)
@@ -210,7 +210,7 @@ void draw()
 				}
 			}
 			else if ((i > 20 and i < 25 and j == 13) or (i > 20 and i < 25 and j == 19))
-			{
+				{
 				if (cardCon[11] == 1)
 				{
 					cout << "|";
@@ -222,7 +222,7 @@ void draw()
 				{
 					cout << "_";
 				}
-			}
+				}
 			else if ((i > 20 and i < 25 and j == 20) or (i > 20 and i < 25 and j == 26))
 			{
 				if (cardCon[12] == 1)
@@ -302,11 +302,11 @@ void draw()
 			}
 			else if ((i == 25 and j > 38 and j < 44) or (i == 29 and j > 38 and j < 44))
 			{
-				cout << "_";
+			cout << "_";
 			}
 			else if ((i > 25 and i < 30 and j == 38) or (i > 25 and i < 30 and j == 44))
 			{
-				cout << "|";
+			cout << "|";
 			}
 			//
 
@@ -333,7 +333,7 @@ void draw()
 				}
 			}
 			else if ((i > 30 and i < 35 and j == 13) or (i > 30 and i < 35 and j == 19))
-			{
+				{
 				if (cardCon[16] == 1)
 				{
 					cout << "|";
@@ -345,7 +345,7 @@ void draw()
 				{
 					cout << "_";
 				}
-			}
+				}
 			else if ((i > 30 and i < 35 and j == 20) or (i > 30 and i < 35 and j == 26))
 			{
 				if (cardCon[17] == 1)
@@ -654,9 +654,9 @@ void draw()
 				}
 			}
 			else if (i == 51 and j == 45)
-			{
-				cout << "Withdraw a card PRESS Q";
-			}
+				{
+					cout << "Withdraw a card PRESS Q";
+				}
 			else if ((i == 60 and j > 41 and j < 47) or (i == 64 and j > 41 and j < 47))
 			{
 				if (cards > 0)
@@ -685,7 +685,7 @@ void draw()
 					cout << "|";
 				}
 			}
-			else if ((i == 60 and j > 27 and j < 33) or (i == 64 and j > 34 and j < 27))
+			else if ((i == 60 and j > 27 and j < 33) or (i == 64 and j > 27 and j < 33))
 			{
 				if (cards > 2)
 				{
@@ -765,19 +765,13 @@ int main()
 			variation[i] = 0;
 		}
 	}
-	while (game == true)
-	{
+    while (game == true)
+    {
 		choice();
-		draw();
+        draw();
 		Input();
 		Logic();
-		clear();
-	}
+        clear();
+    }
 }
-
-/*	 _____   _____   _____   _____   _____   _____
-	| xor | |     | |     | |     | |     | |     |
-	|  |  | |     | |     | |     | |     | |     |
-	| \|/ | |     | |     | |     | |     | |     |
-	|__0__| |_____| |_____| |_____| |_____| |_____|
-*/
+ 
