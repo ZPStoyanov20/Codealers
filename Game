@@ -26,6 +26,14 @@ HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
 void choice()
 {
+	if (choose > 29)
+	{
+		choose = 0;
+	}
+	if (choose < 0)
+	{
+		choose = 29;
+	}
 	for (int i = 0; i <= 29; i++)
 	{
 		cardCon[i] = 0;
