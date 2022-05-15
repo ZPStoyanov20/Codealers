@@ -15,9 +15,7 @@ int choose = 0;
 
 bool cardCon[30] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
-bool conatin[30];
-
-short int variation[6] = { 0, 0, 0, 0, 0, 0 }; 
+bool variation[6] = { 0, 0, 0, 0, 0, 0 }; 
 
 enum eDirection { UP, DOWN, LEFT, RIGHT, STOP };
 eDirection way;
@@ -29,21 +27,6 @@ void choice()
 	for (int i = 0; i < 30; i++)
 	{
 		cardCon[i] = 1;
-	}
-}
-
-void variationRandomizer()
-{
-	for (int i = 0; i < 6; i++)
-	{
-		if  (rand() % 1 == 1)
-		{
-			variation[i] = 0;
-		}
-		else
-		{
-			variation[i] = 1;
-		}
 	}
 }
 
@@ -605,6 +588,72 @@ void draw()
 					cout << "0";
 				}
 			}
+			else if (i == 26 and j == 27)
+			{
+				if (variation[3] == 1)
+				{
+					cout << "1";
+				}
+				else
+				{
+					cout << "0";
+				}
+			}
+			else if (i == 28 and j == 27)
+			{
+				if (variation[3] == 0)
+				{
+					cout << "1";
+				}
+				else
+				{
+					cout << "0";
+				}
+			}
+			else if (i == 26 and j == 34)
+			{
+				if (variation[4] == 1)
+				{
+					cout << "1";
+				}
+				else
+				{
+					cout << "0";
+				}
+			}
+			else if (i == 28 and j == 34)
+			{
+				if (variation[4] == 0)
+				{
+					cout << "1";
+				}
+				else
+				{
+					cout << "0";
+				}
+			}
+			else if (i == 26 and j == 41)
+			{
+				if (variation[5] == 1)
+				{
+					cout << "1";
+				}
+				else
+				{
+					cout << "0";
+				}
+			}
+			else if (i == 28 and j == 41)
+			{
+				if (variation[5] == 0)
+				{
+					cout << "1";
+				}
+				else
+				{
+					cout << "0";
+				}
+			}
 			else
 			{
 				cout << " ";
@@ -653,7 +702,17 @@ void Input()
 int main()
 {
 	srand(time(0));
-	variationRandomizer();
+	for (int i = 0; i < 6; i++)
+	{
+		if (rand() % 1 == 1)
+		{
+			variation[i] = 1;
+		}
+		else
+		{
+			variation[i] = 0;
+		}
+	}
     while (game == true)
     {
 		choice();
